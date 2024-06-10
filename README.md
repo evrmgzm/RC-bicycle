@@ -1,4 +1,8 @@
 # RC-bicycle
+![image](https://github.com/evrmgzm/RC-bicycle/assets/97483789/80d59e03-2e39-4d0e-b65f-695b706b8f45)
+![image](https://github.com/evrmgzm/RC-bicycle/assets/97483789/5023992a-8a44-4340-b4f7-e55e77a0c288)
+![image](https://github.com/evrmgzm/RC-bicycle/assets/97483789/b1650dc2-d6cd-4299-963f-896b865b7606)
+
 ABSTRACT
 In a world where technology is shaping the way we move, our project aims to bring a fresh
 perspective to personal mobility. At the heart of our endeavor is the development of a bicycle
