@@ -1,5 +1,5 @@
 # RC-bicycle
-#ABSTRACT
+ABSTRACT
 In a world where technology is shaping the way we move, our project aims to bring a fresh
 perspective to personal mobility. At the heart of our endeavor is the development of a bicycle
 robot—an innovative blend of robotics, sensor tech, and wireless connectivity.
