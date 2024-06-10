@@ -72,6 +72,55 @@ The working principle is based on the Coriolis Effect. The Coriolis Effect state
 
 ![image](https://github.com/evrmgzm/RC-bicycle/assets/97483789/d6025ef7-0eb9-47aa-87ac-276356a160e1)
 
+SG 90 Servo Motor
+
+The SG90 Servo Motor is an actuator that produces a rotary motşon approximately from 0˚ to 180˚. Servo motors in general are used in many applications such as robotic arms, steering wheels, camera gimbals, etc. Servo motors have three wires: power, ground, and signal. The power wire is red, should be connected to the power supply, usually 5V. The ground wire is usually black, or brown should be connected to the ground. The signal wire is usually yellow, or orange should be connected to a PWM (Pulse Width Modulation) on the board.
+![image](https://github.com/evrmgzm/RC-bicycle/assets/97483789/722688f5-fcd5-4009-98ad-d18c6fb54747)
+
+
+The angle is determined by the duration of a pulse that is applied to the control wire. This is called Pulse Width Modulation. The length of the pulse will determine how far the motor turns. The microcontroller sends out PWM signals to the servo, and then the embedded board on the servo receives the signals through the signal pin and the controls the motor inside to turn. As a result, the motor drives the gear system and then rotates the shaft after deceleration. The shaft and the potentiometer of the servo are connected. When the shaft rotates, it drives the potentiometer, so the potentiometer outputs a signal to the embedded board. Then the
+ 
+board determines the direction and the speed of the rotation based on the current position, so it can stop exactly at the right position as defined and hold there.
+
+![image](https://github.com/evrmgzm/RC-bicycle/assets/97483789/8246cb12-a1c7-4c1b-9d21-36f98d3fe4a1)
+
+Position "0" (1.5 ms pulse) is middle, "90" (~2 ms pulse) is all the way to the left. ms pulse) is middle, "90" (~2 ms pulse) is all the way to the right, " the left.
+
+![image](https://github.com/evrmgzm/RC-bicycle/assets/97483789/ff4b0eb9-269c-453b-9b7d-75bd0cd2bc18)
+
+
+DRV8833
+
+To control the speed and direction of the DC motor, we are going to use DRV-8833. The DRV8833 features two NMOS H-bridge drivers, enabling it to control two DC brush motors, a bipolar stepper motor, solenoids, and other inductive loads. The driver supply voltage is 2.7 to 10.8V and the allowable continuous current is 1.5A and the maximum allowable current is 2A. Some common applications are: POS printers, toys, robotics, office automation systems.
+To change the direction of rotation of a DC motor you need to change the polarity of the supply. A common technique to do that is by using an H-bridge motor driver. An H-bridge motor driver consists of four switches (usually MOSFETs) arranged in a certain formation and the motor is connected to the center of the arrangement to form the H-like structure, by closing/enabling two opposite switches we can change the direction of the flowing current thus changing the direction of rotation.
+![image](https://github.com/evrmgzm/RC-bicycle/assets/97483789/61c79335-30c1-4ae9-b53d-0ac993e7a017)
+
+
+The pinout of the DRV-8833 is given in Figure 6. This module has 16 pins:
+
+•	VM: Motor voltage
+•	GND: Ground – three grounds connected to each other
+•	AO1: Positive end for motor A
+•	AO2: Negative end for motor A
+•	BO1: Positive end for motor B
+•	BO2: Negative end for motor B
+•	AIN1: Control signal for motor A
+ 
+•	AIN2: Control signal for motor A
+•	BIN1: Control signal for motor B
+•	BIN2: Control signal for motor B
+•	STBY: To active Standby mode, it should be HIGH.
+•	NC: Not used
+Different modes of the control signals provide different performance modes for DC motors. Different modes are given in Table 1.
+
+	AIN1 / (BIN1)	AIN2 / (BIN2)
+Forward Direction	HIGH	LOW
+Reverse Direction	LOW	HIGH
+Brake / Stopped	LOW	LOW
+Brake / Stopped	HIGH	HIGH
+Table 1.
+
+
 
 
 
